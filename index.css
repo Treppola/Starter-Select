@@ -48,6 +48,30 @@ body {
   padding: 2rem 1rem 3rem;
 }
 
+.scroll-wrapper {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-inner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 1rem;
+}
+
 .gen-labels {
   display: grid;
   grid-template-columns: repeat(var(--grid-cols), var(--card-width));
